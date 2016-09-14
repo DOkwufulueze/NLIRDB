@@ -1,0 +1,168 @@
+create table admin(
+USERNAME VARCHAR(20),
+PASSWORD VARCHAR(20)
+)
+
+create table users(
+USERNAME VARCHAR(20),
+PASSWORD VARCHAR(20),
+CONSTRAINT UNAME PRIMARY KEY(USERNAME)
+)
+
+create table csc(
+FIRSTNAME VARCHAR(20),
+LASTNAME VARCHAR(20),
+DESIGNATION CHAR(10),
+MATRIC_NUMBER CHAR(15),
+LECTURER_NUMBER CHAR(15),
+PHONE CHAR(15)
+)
+
+create table corpus(
+WORDS VARCHAR(50),
+PS VARCHAR(20),
+DESCRIPTION CHAR(20),
+CATEGORY CHAR(15),
+DESIGNATION CHAR(15)
+)
+
+--Dumping data for corpus
+INSERT INTO  `nlirdb`.`corpus` (`WORDS` ,`PS` ,`DESCRIPTION` ,`CATEGORY` ,`DESIGNATION`)
+VALUES 
+('Goodluck',  'Noun',  'FIRSTNAME',  'Specific',  'President'), 
+('Ebele',  'Noun',  'MIDDLE_NAME',  'Specific',  'President')
+('Nigerians',  'Noun',  'COUNTRY_CITIZENS',  'Specific',  'Country'), 
+('Americans',  'Noun',  'COUNTRY_CITIZENS',  'Specific',  'Country'), 
+('Ghanaians',  'Noun',  'COUNTRY_CITIZENS',  'Specific',  'Country'), 
+('Brazilians',  'Noun',  'COUNTRY_CITIZENS',  'Specific',  'Country'), 
+('Austrlians',  'Noun',  'COUNTRY_CITIZENS',  'Specific',  'Country'), 
+('Egyptians',  'Noun',  'COUNTRY_CITIZENS',  'Specific',  'Country'), 
+('Afghanis',  'Noun',  'COUNTRY_CITIZENS',  'Specific',  'Country'), 
+('Argentinians',  'Noun',  'COUNTRY_CITIZENS',  'Specific',  'Country'), 
+('Asian',  'Noun',  'CONTINENT_CITIZEN',  'Specific',  'Continent'), 
+('European',  'Noun',  'CONTINENT_CITIZEN',  'Specific',  'Continent'),
+('African',  'Noun',  'CONTINENT_CITIZEN',  'Specific',  'Continent'),
+('American',  'Noun',  'CONTINENT_CITIZEN',  'Specific',  'Continent'), 
+('Asians',  'Noun',  'CONTINENT_CITIZENS',  'Specific',  'Continent'), 
+('Europeans',  'Noun',  'CONTINENT_CITIZENS',  'Specific',  'Continent'),
+('Africans',  'Noun',  'CONTINENT_CITIZENS',  'Specific',  'Continent'),
+('Americans',  'Noun',  'CONTINENT_CITIZENS',  'Specific',  'Continent'),
+
+('Cubans',  'Noun',  'COUNTRY_CITIZENS',  'Specific',  'Country'), 
+('Chileans',  'Noun',  'COUNTRY_CITIZENS',  'Specific',  'Country'), 
+('Jamaicans',  'Noun',  'COUNTRY_CITIZENS',  'Specific',  'Country'), 
+('Cuban',  'Noun',  'COUNTRY_CITIZEN',  'Specific',  'Country'), 
+('Jamaican',  'Noun',  'COUNTRY_CITIZEN',  'Specific',  'Country'), 
+('Chilean',  'Noun',  'COUNTRY_CITIZEN',  'Specific',  'Country'), 
+('Lebanese',  'Noun',  'COUNTRY_CITIZEN',  'Specific',  'Country'), 
+('Chinese',  'Noun',  'COUNTRY_CITIZEN',  'Specific',  'Country'), 
+('Spanish',  'Noun',  'COUNTRY_CITIZEN',  'Specific',  'Country'), 
+('Portuguese',  'Noun',  'COUNTRY_CITIZEN',  'Specific',  'Country'), 
+('Havana',  'Noun',  'CAPITAL',  'Specific',  'Capital'), 
+('Kingston',  'Noun',  'CAPITAL',  'Specific',  'Capital'), 
+('Santiago',  'Noun',  'CAPITAL',  'Specific',  'Capital'),
+('Beirut',  'Noun',  'CAPITAL',  'Specific',  'Capital'),
+('Beijing',  'Noun',  'CAPITAL',  'Specific',  'Capital'), 
+('Madrid',  'Noun',  'CAPITAL',  'Specific',  'Capital'), 
+('Lisbon',  'Noun',  'CAPITAL',  'Specific',  'Capital'),
+('Africans',  'Noun',  'CONTINENT_CITIZENS',  'Specific',  'Continent'),
+('Americans',  'Noun',  'CONTINENT_CITIZENS',  'Specific',  'Continent'),
+('North',  'Noun',  'LOCATE',  'Specific',  'Continent'),
+('South',  'Noun',  'LOCATE',  'Specific',  'Continent')
+
+
+-------------------------------------------------
+
+INSERT INTO `nlirdb`.`csc` (
+`FIRSTNAME` ,`LASTNAME` ,`DESIGNATION` ,`MATRIC_NUMBER` ,`LECTURER_NUMBER` ,`PHONE`
+)
+VALUES 
+(
+'Daniel', 'Okwufulueze', 'Student', '080591050', NULL , '08024538049'
+), 
+(
+'Rafat', 'Adebanjo', 'Student', '080591071', NULL , '08044404043'
+);
+
+----------------------------------------------
+
+create table countries(
+COUNTRY char(20),
+CONTINENT char(20),
+CAPITAL char(30),
+PRESIDENT char(80),
+FIRSTNAME char(80),
+MIDDLE_NAME char(80),
+LASTNAME char(80),
+INDEPENDENT char(10),
+COUNTRY_ALIAS char(20), 
+CONTINENT_ALIAS char(20), 
+COUNTRY_CITIZEN char(20), 
+CONTINENT_CITIZEN char(20), 
+COUNTRY_ALIASES char(20), 
+CONTINENT_ALIASES char(20), 
+COUNTRY_CITIZENS char(20), 
+CONTINENT_CITIZENS char(20), 
+LOCATE char(20)
+)
+
+--Dumping data for countries
+insert into countries(
+COUNTRY ,CONTINENT, CAPITAL, PRESIDENT ,FIRSTNAME ,MIDDLE_NAME ,LASTNAME ,INDEPENDENT, COUNTRY_ALIAS, CONTINENT_ALIAS, COUNTRY_CITIZEN, CONTINENT_CITIZEN, COUNTRY_ALIASES, CONTINENT_ALIASES, COUNTRY_CITIZENS, CONTINENT_CITIZENS, LOCATE
+)
+values
+('Nigeria','Africa','Abuja','Goodluck Ebele Jonathan','Goodluck','Ebele','Jonathan','1960', 'Naija', 'Afro', 'Nigerian', 'African', 'Naijas', 'Afros', 'Nigerians', 'Africans', ''),
+('USA','America','Washington, D.C','Barak Obama','Barak','','Obama','1787', '', '','American', 'American','', 'Americas', 'Americans', 'Americans', 'North'),
+('Ghana','Africa','Accra','John Dramani Mahama','John','Dramani','Mahama','1957', '', 'Afro','Ghanaian', 'African','', 'Afros', 'Ghanaians', 'Africans', ''),
+('Brazil','America','Brasilia','Dilma Roussef','Dilma','','Roussef','1882', '', '','Brazilian', 'American','', 'Americas', 'Brazilians', 'Americans', 'South'),
+('Australia','Australia','Canberra','Julia Gillard','Julia','','Gillard','1901', '', '','Australian', '','', '', 'Australians', '', ''),
+('Egypt','Africa','Cairo','Mohamed Morsi','Mohamed','','Morsi','1936', '', 'Afro', 'Egyptian', 'African','', '', 'Egyptians', 'Africans', ''),
+('Argentina','America', 'Buenos Aires','Fernandez de Kirchner','Fernandez','','Kirchner','1816', 'Argentine', '','Argentinian', 'American','Argentines', 'Americas', 'Argentinians', 'Americans', 'South'),
+('Afghanistan',  'Asia',  'Kabul', 'Hamid Karzai' , 'Hamid' , '', 'Karzai' , '1919' , 'Afghan', '',  'Afghani',  'Asian','Afghans', '', 'Afghanis', 'Asians', ''), 
+('Cuba',  'America',  'Havana', 'Hamid Karzai' , 'Hamid' , '', 'Karzai' , '1919' , '', '',  'Cuban',  'American','', '', 'Cubans', 'Americans', 'North'), 
+('Jamaica',  'America',  'Kingston', 'Hamid Karzai' , 'Hamid' , '', 'Karzai' , '1919' , '', '',  'Jamaican',  'American','', '', 'Jamaicans', 'Americans', 'North'), 
+('Chile',  'America',  'Santiago', 'Hamid Karzai' , 'Hamid' , '', 'Karzai' , '1919' , '', '',  'Chilean',  'American','', '', 'Chileans', 'Americans', 'South'), 
+('Spain',  'Europe',  'Madrid', 'Hamid Karzai' , 'Hamid' , '', 'Karzai' , '1919' , '', '',  'Spanish',  'European','', '', '', 'Europeans', ''), 
+('Portugal',  'Europe',  'Lisbon', 'Hamid Karzai' , 'Hamid' , '', 'Karzai' , '1919' , '', '',  'Portuguese',  'European','', '', '', 'Europeans', ''), 
+('Lebanon',  'Asia',  'Beirut', 'Hamid Karzai' , 'Hamid' , '', 'Karzai' , '1919' , '', '',  'Lebanese',  'Asian','', '', '', 'Asians', ''), 
+('China',  'Asia',  'Beijing', 'Hamid Karzai' , 'Hamid' , '', 'Karzai' , '1919' , '', '',  'Chinese',  'Asian','', '', '', 'Asians', ''), 
+('France',  'Europe',  'Paris', 'Francois Hollande' , 'Francois' , '' , 'Hollande' , '1789' ,  '', '', 'French', 'European','', '', '', 'Europeans', '');
+----------------------------------------------------
+
+create table requests(
+INPUT_TERM varchar(40),
+TERM varchar(20) ,
+REQUESTABLE varchar(30)
+)
+
+--Dumping values for requests
+insert into requests(
+INPUT_TERM, TERM, REQUESTABLE
+)
+values
+('Matric','Matric','MATRIC_NUMBER'),
+('Lecturer Number','Lecturer Number','LECTURER_NUMBER'),
+('Firstname','Firstname','FIRSTNAME'),
+('Lastname','Lastname','LASTNAME'),
+('Firstnames','Firstname','FIRSTNAME'),
+('Lastnames','Lastname','LASTNAME'),
+('Middlename','Middlename','MIDDLE_NAME'),
+('Middlenames','Middlename','MIDDLE_NAME'),
+('Middle','Middlename','MIDDLE_NAME'),
+('Phone','Phone','PHONE'),
+('President','President','PRESIDENT'),
+('Capital','Capital','CAPITAL'),
+('Independece','Independence','INDEPENDENT'),
+('Country','Country','COUNTRY'),
+('Continent','Continent','CONTINENT'),
+('Independent','Independent','INDEPENDENT'),
+('Countries','Country','COUNTRY'),
+('Continents','Continent','CONTINENT'),
+('Presidents','President','PRESIDENT'),
+('Capitals','Capital','CAPITAL'),
+('Alias','Alias','COUNTRY_ALIAS'),
+('Aliases','Alias','COUNTRY_ALIAS'),
+('Citizen','Citizen','COUNTRY_CITIZEN'),
+('Citizens','Citizens','COUNTRY_CITIZENS'),
+
+----------------------------------------------------

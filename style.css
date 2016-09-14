@@ -1,0 +1,113 @@
+<?php
+/*
+		DEPARTMENT : COMPUTER SCIENCE
+		COURSE CODE : CSC 498
+		COURSE TITLE : PROJECT
+		PROJECT TITLE :Developing a Flexible Natural Language Interface For Relational Databases
+		SUPERVISOR : MR. TOYIN ENIKUOMEHIN
+		DEVELOPER : OKWUFULUEZE EMEKA DANIEL
+		MATRIC NUMBER : 080591050
+		DATE : 21/02/2012
+		
+*/
+?>
+<style type="text/css">
+	body{
+		padding:10px;
+		min-width:400;
+		min-height:400; 
+		background-color:#FFFFdd;
+	}
+	#wrap{
+		
+		margin-right:auto; 
+		margin-left:auto; 
+		width:750px; 
+		background-color:#fef8f7
+	}
+	#head{
+		width:750px; 
+		height:200px; 
+		clear:both; 
+		margin-bottom:10px;
+		background-image:url(thumb_at_splendid_sm.jpg);
+		text-align:center;
+		font-size:28px; 
+		color: #101010; 
+		border-bottom:#bbaa33 solid 1px;
+	}
+	#side{
+		width:120px; 
+		padding-left:10px;
+		padding-right:10px;
+		margin-right:0px;
+		margin-bottom:0px; 
+		margin-left:5px;
+		float:right; 
+		text-align:center; 
+		background-color:#fef8f7; 
+	}
+	#body{
+		padding:10px;
+		width:570px;  
+		float:left;
+		height:inherit; 
+		background-color: #efe9f7;
+		margin-bottom:0px;
+		border-right:solid 1px #bbaa33;
+		border-style:dotted;
+		border-top:hidden;
+		border-bottom:hidden;
+		border-left:hidden;
+	}
+	#foot{
+		clear:both ; 
+		width:750px; 
+		text-align:center; 
+		color:#fef8f7; 
+		background-color: #4488bb;
+	}
+	a:hover{
+		text-transform:uppercase; 
+		background-color:#FFCCCC;
+		color:#ffffff
+	}
+	#message{
+		clear:both;
+		padding-left:10px;
+		padding-right:10px; 
+		float:left;
+		width:auto;
+		height:inherit;
+		border:1px solid #eeee00;
+		visibility:hidden;
+		margin-top:20px;
+		margin-bottom:20px;
+	}
+	#headi{
+		clear:both;
+		padding-left:0px;
+		padding-right:0px; 
+		float:left;
+		width:auto;
+		height:inherit;
+		margin-top:20px;
+		visibility:hidden;
+	}
+	#sql{
+		visibility:hidden;
+		clear:both;
+		width:auto;
+		height:auto;
+		border:1px solid #339999;
+		margin-top:20px;
+		padding-right:10px;
+		padding-left:10px;
+	}
+	#alone{
+		clear:both;
+		float:left; 
+		width:inherit;
+		background-color:#bababa;
+	}
+</style>
